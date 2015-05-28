@@ -2,8 +2,22 @@
 html(lang="pt-BR")
     head
         title= title
-        link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
-        link(rel='stylesheet', href='/css/style.css')
+        
+        <!-- CSS -->
+        link(rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" href="css/style.css") <!-- custom styles -->
+
+        <!-- JS -->
+        script(src="libs/angular/angular.min.js")
+        script(src="libs/angular-route/angular-route.min.js")
+
+        <!-- ANGULAR CUSTOM -->
+        script(src="js/controllers/MainCtrl.js")
+        script(src="js/controllers/NerdCtrl.js")
+        script(src="js/services/NerdService.js")
+        script(src="js/appRoutes.js")
+        script(src="js/app.js")
+
     body
         div(class="navbar navbar-inverse navbar-fixed-top")
             div(class="container")
