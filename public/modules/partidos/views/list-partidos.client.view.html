@@ -1,0 +1,20 @@
+<section data-ng-controller="PartidosController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Partidos</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="partido in partidos" data-ng-href="#!/partidos/{{partido._id}}" class="list-group-item">
+			<h4 class="list-group-item-heading" data-ng-bind="partido.name"></h4>
+            <small class="list-group-item-text">
+				Cadastrado
+				<span data-ng-bind="partido.created | date:'medium'"></span>
+				por
+				<span data-ng-bind="partido.user.displayName"></span>
+			</small>
+			
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!partidos.$resolved || partidos.length">
+    	Nenhum partido cadastrado! <a href="/#!/partidos/create">Cadastre!</a>?
+    </div>
+</section>
