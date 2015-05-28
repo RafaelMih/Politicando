@@ -1,0 +1,21 @@
+﻿extends ../layout
+
+block content
+    h1= value.nome
+    hr
+    br
+    p ID: #{value._id}
+    p Login: #{value.login}
+    p Data de cadastro: #{value.data_cad}
+    br
+    br
+    form(method="post", action="/usuario/deletar/#{value._id}", role="form")
+        input(type="hidden" name="_method" value="delete")
+        div(class="container")
+            div(class="col-md-1")
+                a(href="/usuario/editar/#{value._id}" title="Editar" class="btn btn-info padding-right") Editar
+            div(class="col-md-1")
+                input(type="submit" value="Excluir" class="btn btn-danger")    
+    br
+    br    
+    a(href="/usuario" title="Voltar") Voltar

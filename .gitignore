@@ -25,6 +25,7 @@ Thumbs.db
 *.tmp
 *.dat
 node_modules/
+lib/
 obj/
 [Rr]elease*/
 _ReSharper*/
